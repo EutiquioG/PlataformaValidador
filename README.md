@@ -1,75 +1,114 @@
-# React + TypeScript + Vite
+#  Asignación No. 3  
+## Validador de Formularios Dinámico - Registro de Usuario
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+---
 
-Currently, two official plugins are available:
+## Descripción del Proyecto
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Este proyecto consiste en el desarrollo de un validador dinámico de formularios del lado del cliente utilizando:
 
-## React Compiler
+- React
+- TypeScript
+- JavaScript ES6+
+- React Router
+- CSS moderno
 
-The React Compiler is enabled on this template. See [this documentation](https://react.dev/learn/react-compiler) for more information.
+El sistema simula el registro de un nuevo usuario dentro de una plataforma tipo e-commerce.
 
-Note: This will impact Vite dev & build performances.
+---
 
-## Expanding the ESLint configuration
+## 🎯 Objetivo
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+Aplicar conocimientos avanzados de:
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+- Manejo de estado en React
+- Validaciones dinámicas en tiempo real
+- Tipado fuerte con TypeScript
+- Manejo de rutas
+- Buenas prácticas de estructura de proyecto
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+---
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+## 🛠️ Tecnologías Utilizadas
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+- React 18+
+- TypeScript
+- Vite
+- React Router DOM
+- CSS3
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+---
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+## 📂 Estructura del Proyecto
+src/
+├── components/
+│ └── RegisterForm.tsx
+├── pages/
+│ ├── Home.tsx
+│ └── Register.tsx
+├── App.tsx
+├── main.tsx
+└── styles.css
+
+
+---
+
+## ✔️ Validaciones Implementadas
+
+- Campo obligatorio (required)
+- Validación de formato de correo electrónico
+- Validación de contraseña segura:
+  - Mínimo 8 caracteres
+  - Mayúscula
+  - Número
+- Confirmación de contraseña
+- Fecha de nacimiento válida
+- Campo numérico validado
+- Mensajes de error dinámicos en tiempo real
+- Alertas descriptivas al enviar formulario
+
+---
+
+## ⚙️ Instalación y Ejecución
+
+1️⃣ Clonar el repositorio:
+git clone https://github.com/TU-USUARIO/validador-formulario-react-ts.git
+
+
+2️⃣ Instalar dependencias:
+npm install
+
+3️⃣ Ejecutar el proyecto:
+
+4️⃣ Abrir en el navegador:
+http://localhost:5173
+
+
+---
+
+## 🖥️ Capturas de Pantalla
+
+<img width="1363" height="551" alt="image" src="https://github.com/user-attachments/assets/debbc40b-2ffa-46d0-844d-1ae7e4a404dd" />
+<img width="782" height="417" alt="image" src="https://github.com/user-attachments/assets/723ef86a-236e-4791-943b-a1bfb681f00e" />
+
+
+## 🚧 Desafíos Encontrados
+
+- Manejo de estados múltiples para validaciones
+- Validaciones en tiempo real sin recargar
+- Tipado correcto de eventos en TypeScript
+
+### 💡 Soluciones
+
+- Uso de useState para cada campo
+- Creación de funciones reutilizables de validación
+- Tipado correcto de React.ChangeEvent
+
+---
+
+## 👨‍💻 Autor
+
+EUTIQUIO GONZALEZ LEIVAZ  
+Desarrollo Web Avanzado  
+
+---
